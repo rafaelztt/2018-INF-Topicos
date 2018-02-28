@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Aula 02 - Formulários</title>
+</head>
+<body>
+  <!-- Atalhos do ATOM:
+  ctrl+shift+d - duplica linha
+  ctrl+baixo/cima - movimenta linha
+  ctrl+; - comenta linha -->
+
+  <!-- Por que usar classe em html?
+  Serve para identificar, formatar, manipular um conjunto de elementos
+  usando o CSS, por exemplo. -->
+  <div class="">
+    <h3>Formulários</h3>
+
+    <form class="" action="" method="get">
+      <label for="">Nome:</label><br>
+      <input type="text" name="nome" value=""><br>
+
+      <br>
+
+      <!-- o atributo value do radio e checkbox é passado como o valor
+      para aquele "name" lá no servidor -->
+
+      <label for="">Sexo:</label><br>
+      <!-- Todos os "radios" da mesma opção tem que ter o mesmo name -->
+
+      <input type="radio" name="sexo" value="m" id="radioMasc">
+      <label for="radioMasc">Masculino</label><br>
+
+      <input type="radio" name="sexo" value="f" id="radioFem">
+      <label for="radioFem">Feminino</label><br>
+
+      <br>
+
+      <label for="">Interesses:</label><br>
+      <!-- Checkbox também deve ter o mesmo name para todos do conjunto -->
+
+      <input type="checkbox" name="interesse[]" value="esporte" id="chEsp">
+      <label for="chEsp">Esportes</label><br>
+
+      <input type="checkbox" name="interesse[]" value="carros" id="chCar">
+      <label for="chCar">Carros</label><br>
+
+      <input type="checkbox" name="interesse[]" value="motos" id="chMot">
+      <label for="chMot">Motos</label><br>
+
+      <br>
+
+      <label for="">Cidade:</label><br>
+      <!-- A ordem das opções é a mesma no site -->
+      <select class="" name="cidade">
+        <option value="">Selecione uma cidade</option>
+        <option value="1">Alto Paraná</option>
+        <option value="3">Cianorte</option>
+        <option value="4">Paraíso do Norte</option>
+        <option value="2">Paranavaí</option>
+      </select>
+
+      <br><br>
+      <input type="submit" name="" value="Enviar">
+
+    </form>
+
+  </div>
+
+</body>
+</html>
