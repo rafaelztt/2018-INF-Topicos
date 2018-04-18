@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Aula 09 - Layout base com CSS</title>
+
+  <!-- Importação dos ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Formatação do site -->
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  .centralizado{
+    text-align: center;
+  }
+
+  .topo{
+
+  }
+
+  .meio{
+    background-color: #f2f2f2;
+  }
+
+  .menu-horizontal ul {
+    list-style-type: none;
+    background-color: #666666;
+    text-align: center;
+    /*Cor
+    Deslocamento para direita
+    Deslocamento para baixo
+    Sombreado*/
+    box-shadow: #666666 0px 1px 5px;
+  }
+  .menu-horizontal ul li{
+    display: inline;
+  }
+  .menu-horizontal ul li a{
+    background-color: #666666;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 25px;
+    display: inline-block;
+  }
+
+  .menu-horizontal ul li a:hover{
+    background-color: #111111;
+  }
+
+  .lateral{
+    float: left;
+    background-color: #f2f2f2;
+    width: 22%;
+    height: 100%;
+  }
+
+  .lateral h4{
+    margin: 20px;
+  }
+
+  .lateral ul{
+    width: 100%;
+    list-style-type: none;
+  }
+
+  .lateral ul li a{
+    color: #009900;
+    display: block;
+    text-decoration: none;
+    padding: 5px 5px 5px 20px;
+  }
+
+  .lateral ul li a:hover{
+    background-color: #666666;
+    color: #ffffff;
+  }
+
+  .conteudo{
+    float: left;
+    width: 78%;
+    background-color: #ffffff;
+  }
+
+  .conteudo .conteudo-blog{
+    margin: 25px;
+  }
+
+  .limparFloat{
+    clear: both;
+  }
+
+  .rodape{
+    background-color: #f2f2f2;
+  }
+
+  /*Condição para formatar apenas telas com largura máxima de 800px*/
+  @media screen and (max-width: 800px) {
+    /*Tanto a lateral quanto o conteúdo vão ocupar toda a largura da tela*/
+    .lateral, .conteudo{
+      width: 100%;
+    }
+
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="topo centralizado">
+    <img src="http://capanema.ifpr.edu.br/wp-content/themes/ifet_1.2/images/ifpr_logo.png" alt="">
+  </div>
+
+  <div class="menu-horizontal">
+    <a href="#"></a>
+    <ul>
+      <li>
+        <a href="#">
+          <i class="fa fa-home"></i>
+          Home
+        </a>
+      </li>
+      <li><a href="#">IFPR</a></li>
+      <li><a href="#">Tópicos Especiais</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li>
+        <a href="#">
+          <i class="fa fa-envelope-open" aria-hidden="true"></i>
+          Contato
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- fim do menu horizontal -->
+
+  <div class="meio">
+
+    <div class="lateral">
+
+      <h4>Menu lateral</h4>
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fa fa-home"></i>
+            Home
+          </a>
+        </li>
+        <li><a href="#">IFPR</a></li>
+        <li><a href="#">Tópicos Especiais</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li>
+          <a href="#">
+            <i class="fa fa-envelope-open" aria-hidden="true"></i>
+            Contato
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <!-- fim do menu lateral -->
+
+    <div class="conteudo">
+
+      <div class="conteudo-blog">
+        <h3>Conteúdo do nosso site</h3>
+
+        <h4>O que é Lorem Ipsum?</h4>
+        <p>
+          Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+        </p>
+
+        <h4>De onde ele vem?</h4>
+        <p>
+          Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Usada para não deixar o rodapé receber o float do conteúdo -->
+    <div class="limparFloat"></div>
+
+    <!-- Fecha a div da classe "meio" -->
+  </div>
+
+  <div class="rodape centralizado">
+    Desenvolvido por Rafael Zottesso <br>
+    IFPR - Campus Paranavaí
+  </div>
+
+</body>
+</html>
