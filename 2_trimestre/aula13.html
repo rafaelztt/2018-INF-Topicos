@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Aula 13 - Javascript</title>
+
+    <!-- Import do jQuery que está no repositório local -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Usando o jQuery -->
+    <script>
+      // Declaração básica do jQuery
+      // Só vai "processar" o código quando o documento estiver pronto (carregado)
+      $(document).ready( function(){
+
+        // Aqui vai todo código jQuery do site
+
+        // Código Javascript porque não começa com: $
+        // alert("Ok, tudo funcionando!");
+
+        // Criando um evento quando clicar no elemento aba1
+        $("#aba1").click(function(){
+          // Mostra o elemento p1
+          $("#p1").show();
+          // Esconde os elementos p2 e p3
+          $("#p2").hide();
+          $("#p3").hide();
+        });
+
+        // Cria um evento ao clicar no elemento aba2
+        $("#aba2").click(function(){
+          // Esconde todas os elementos que tem a classe "aba"
+          $(".aba").hide();
+          // Mostra somente o elemento p2
+          $("#p2").fadeIn();
+        });
+
+        $("#aba3").click(function(){
+          $(".aba").hide();
+          $("#p3").fadeIn();
+        });
+
+
+      } );
+    </script>
+
+    <style media="screen">
+      .aba{
+        display: none;
+      }
+    </style>
+
+
+  </head>
+  <body>
+
+    <h3>Introdução ao jQuery</h3>
+
+    <a href="#" id="aba1">Aba 1</a>
+    <a href="#" id="aba2">Aba 2</a>
+    <a href="#" id="aba3">Aba 3</a>
+
+    <p id="p1" class="aba">
+      Conteúdo do Parágrafo 1
+    </p>
+
+    <p id="p2" class="aba">
+      IFPR - Instituto Federal do Paraná
+    </p>
+
+    <p id="p3" class="aba">
+      O Corinthians só ganha com ajuda do árbitro.
+    </p>
+
+  </body>
+</html>
