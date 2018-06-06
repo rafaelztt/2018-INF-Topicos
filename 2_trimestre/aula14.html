@@ -27,6 +27,11 @@
             //alert("Preencha um termo para buscar!");
             $("#mensagem").text("Preencha um termo!");
 
+            // O comando .css aplica um css no elemento
+            // Você para a propriedade e o valor como parâmetro
+            $("#mensagem").css('color', 'red');
+            $("#mensagem").css('font-size', '14px');
+
             // retorna (sai) da função de click (como se fosse um break)
             return;
         }
