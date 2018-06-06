@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery para validação de formulário</title>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>
+
+    $(document).ready(function() {
+
+      $("#buscar").click(function() {
+
+        // Criar variável para armazenar o termo digitado
+        var txt = $("#termo").val();
+
+        // Exemplo de um seletor mais complexo
+        //$("input[name='buscar']").val();
+
+        // .val() retorna o valor de um campo
+        // .val("texto") define o campo com o texto informado
+
+        // Se o texto for vazio
+        if(txt == ""){
+            // Exibe um alerta
+            //alert("Preencha um termo para buscar!");
+            $("#mensagem").text("Preencha um termo!");
+
+            // retorna (sai) da função de click (como se fosse um break)
+            return;
+        }
+
+        // Submete o formulário para sua "action"
+        $("form").submit();
+
+      });
+
+    });
+
+    </script>
+
+  </head>
+  <body>
+
+    <h4>Consulta</h4>
+
+    <form action="" method="get">
+      <label>Pesquisar por:</label>
+      <input type="text" name="termo" id="termo" value=""/>
+      <button type="button" id="buscar">Buscar</button>
+
+      <div class="alerta" id="mensagem"><div>
+    </form>
+
+  </body>
+</html>
