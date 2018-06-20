@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Aula 16 - Validação de Formulários com classe</title>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+          // Esse evento vai ser chamado quando o formulário
+          // com id igual a cadastro for submetido
+
+          // Esse parâmetro e é utilizado para parar o processamento
+          // padrão deste método
+          $("#cadastro").submit(function(e){
+
+              // Para cada elemento com a classe obrigatório
+              $(".obrigatorio").each(function() {
+                // Executa esse código individualmentes
+
+                // o this vai representar cada um dos elementos durante a "iteração"
+                // Se o valor do campo for igual a vazio
+                if( $(this).val() == "" ){
+
+                  // Pegar o span que está próximo (depois) desse elemento
+                  $(this).next("span").text("Este campo é obrigatório!");
+
+                  // Evita que o formulário seja enviado
+                  // Previne o comportamento padrão
+                  e.preventDefault();
+
+                }
+
+              });
+
+          });
+
+        });
+    </script>
+
+    <style media="screen">
+      span{
+          color: red;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <h2>Formulários em HTML</h2>
+
+    <form id="cadastro" action="" method="post">
+
+      <label for="">Nome:</label><br>
+      <input class="obrigatorio" type="text" name="nome" value="" placeholder="Digite seu nome">
+      <span></span>
+      <br>
+
+      <label for="">E-mail:</label><br>
+      <input class="obrigatorio" type="email" name="email" value="">
+      <span></span>
+      <br>
+
+      <label for="">Cidade:</label><br>
+      <select name="cidade" class="obrigatorio">
+        <option value="">Selecione uma cidade</option>
+
+        <option value="1">Alto Paraná</option>
+        <option value="2">Guairaçá</option>
+        <option value="3">Paranavaí</option>
+        <option value="4">São João do Caiuá</option>
+      </select>
+      <span></span>
+      <br>
+
+      <label for="">Senha:</label><br>
+      <input class="obrigatorio" type="password" name="senha" value="">
+      <span></span>
+      <br>
+
+      <label for="">Repetir Senha:</label><br>
+      <input class="obrigatorio" type="password" name="repetirSenha" value="">
+      <span></span>
+      <br>
+
+      <br>
+      <input type="submit" value="Enviar">
+      <input type="reset"  value="Limpar">
+
+    </form>
+
+    <hr>
+
+    <form
+    action="https://www.google.com.br/search"
+    method="get">
+
+      <label>Pesquisar por</label>
+      <input type="text" name="q" value="">
+
+      <input type="submit" value="Ir">
+
+    </form>
+
+  </body>
+</html>
