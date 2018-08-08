@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Aula 21 - Template simples</title>
+
+    <link rel="stylesheet" href="bs4/css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bs4/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // alert("Ok");
+      });
+    </script>
+
+    <style media="screen">
+      .caixas{
+        width: 250px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h2>Página de teste</h2>
+
+    <div class="row">
+
+      <div class="col-sm">
+
+        <!-- bg-cor define a cor de fundo de algum elemento
+        border define que um elemento terá bordas
+        border-cor define a cor da borda
+        text-cor define a cor do texto -->
+
+        <div class="bg-light caixas float-left mr-2 p-2">
+          Rafael Zottesso <br>
+          rafael.zottesso@ifpr.edu.br <br>
+          <span class="text-primary">Analisando propostas...</span>
+
+        </div>
+
+        <!-- A classe "m" serve para adicionar margens nos elementos, podendo
+        definir se quer aplicar no topo (mt), direita (mr), etc -->
+
+        <!-- A classe "p" serve para manipular o padding dos elementos, podendo
+        definir se quer aplicar na parte de baixo (pb), esquerda (pl), etc -->
+
+        <div class="bg-success caixas float-left rounded p-2">
+          Fulano de Tal <br>
+          fulano@tal.com <br>
+          <span class="text-light">Time C</span>
+        </div>
+
+        <!-- cancelar o float dos próximos elementos, que não serão afetados
+        pelo float da caixa anterior -->
+        <div class="clearfix"></div>
+
+      </div>
+
+      <div class="col-sm">
+        Lado 2
+      </div>
+
+    </div>
+
+  </body>
+</html>
