@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 # Página inicial
 class Index(TemplateView):
     # Define qual o arquivo HTML vai ser usado para exibir esta página
-    template_name = "pagina_inicial.html" # deve estar na pasta templates
+    template_name = "modelo.html" # deve estar na pasta templates
 
 
 # Página de ajuda
