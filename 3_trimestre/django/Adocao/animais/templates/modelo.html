@@ -17,6 +17,9 @@
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.css'  %}" rel="stylesheet">
 
+    <!-- Importar o Font awesome -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -34,17 +37,53 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">AdoçãoNET</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+           <li class="nav-item">
+             <a class="nav-link" href="#">
+               <i class="fa fa-home" aria-hidden="true"></i>
+               Página inicial
+               <span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#">
+               <i class="fa fa-search" aria-hidden="true"></i>
+               Procurar um animal
+             </a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#">
+               <i class="fa fa-comments" aria-hidden="true"></i>
+               Contato
+             </a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="#">
+               <i class="fa fa-align-left" aria-hidden="true"></i>
+               Sobre
+             </a>
+           </li>
+         </ul>
+       </div>
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Sign Up</a>
+              <a class="nav-link" href="#">
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                Cadastre-se
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Log In</a>
+              <a class="nav-link" href="#">
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                Login
+              </a>
             </li>
           </ul>
         </div>
@@ -57,9 +96,12 @@
     <header class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
-          <h1 class="masthead-heading mb-0">One Page Wonder</h1>
-          <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2>
-          <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+          <h1 class="masthead-heading mb-0">Adote um animal</h1>
+          <h2 class="masthead-subheading mb-0">ou divulgue aqui se você quer doar algum!</h2>
+          <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+            Cadastre-se
+          </a>
         </div>
       </div>
       <div class="bg-circle-1 bg-circle"></div>
