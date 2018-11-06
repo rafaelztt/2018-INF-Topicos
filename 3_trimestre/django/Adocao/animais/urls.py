@@ -11,4 +11,5 @@ urlpatterns = [
     path('ajuda/', Ajuda.as_view(), name="ajuda"),
     path('contato/', Contato.as_view(), name="contato"),
     path('sobre/', Sobre.as_view(), name="sobre"),
+    path('procurar/', Procurar.as_view(), name="procurar"),
 ]

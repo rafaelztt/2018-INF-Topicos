@@ -19,3 +19,6 @@ class Contato(TemplateView):
 
 class Sobre(TemplateView):
     template_name = 'sobre.html'
+
+class Procurar(TemplateView):
+    template_name = 'procurar.html'
