@@ -47,13 +47,13 @@
            <li class="nav-item">
              <a class="nav-link" href="{% url 'index' %}">
                <i class="fa fa-home" aria-hidden="true"></i>
-               Página inicial
+               Home
                <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item">
              <a class="nav-link" href="{% url 'procurar' %}">
                <i class="fa fa-search" aria-hidden="true"></i>
-               Procurar um animal
+               Procurar
              </a>
            </li>
            <li class="nav-item">
@@ -62,12 +62,28 @@
                Contato
              </a>
            </li>
+
            <li class="nav-item">
              <a class="nav-link" href="{% url 'sobre' %}">
                <i class="fa fa-align-left" aria-hidden="true"></i>
                Sobre
              </a>
            </li>
+
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+              Cadastros
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'listar-cidades' %}">Cidade</a>
+              <a class="dropdown-item" href="{% url 'listar-pessoas' %}">Pessoa</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Animal</a>
+              <a class="dropdown-item" href="#">Tipo</a>
+            </div>
+          </li>
+
          </ul>
        </div>
 

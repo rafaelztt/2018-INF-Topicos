@@ -4,8 +4,20 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
  */
 
+html{
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: 'Lato';
+  margin-bottom: 116px;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 h1,
