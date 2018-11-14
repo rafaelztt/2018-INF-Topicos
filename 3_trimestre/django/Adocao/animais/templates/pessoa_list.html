@@ -12,9 +12,15 @@
 
     <div class="col-sm p-3 mt-4">
 
-      <h2>Lista de Pessoas</h2>
+      <h2 class="border-bottom">
+        Lista de Pessoas
+        <a href="{% url 'inserir-pessoa' %}" class="float-right btn btn-primary btn-sm">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+          Adicionar
+        </a>
+      </h2>
 
-      <table class="table table-striped">
+      <table class="table table-striped mt-4">
 
         <tr>
           <th>ID</th>
