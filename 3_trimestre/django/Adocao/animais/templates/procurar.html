@@ -14,18 +14,18 @@
 
     <div class="col-sm p-3 mt-4 text-center">
 
-      <h2 class="display-4 text-info">Procurar por tipo ou raça</h2>
+      <!-- <h2 class="display-4 text-info">Procurar</h2> -->
 
       <img class="w-100" src="{% static 'img/animais_bg.jpg' %}" alt="">
 
-      <form>
+      <form method="get">
         <div class="form-group">
           <!-- <label for="procurar">Nome ou Raça</label> -->
           <input type="text" class="border-warning border-2 text-dark text-center form-control form-control-lg" id="procurar" placeholder="Digite raça ou o tipo do animal" required/>
           <small id="procurarHelp" class="form-text text-muted">Ex: vira lata, cachorro, tatu, persa.</small>
         </div>
 
-        <button type="submit" class="btn btn-success btn-lg my-3">
+        <button type="submit" class="btn btn-primary btn-lg my-3">
           <i class="fa fa-search" aria-hidden="true"></i>
           Procurar
         </button>
